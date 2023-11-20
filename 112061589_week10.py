@@ -1,11 +1,12 @@
 import streamlit as st
 import pandas as pd
-import os
 from openai import OpenAI
 
 # import OpenAI
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
-client = OpenAI(OPENAI_API_KEY)
+client = OpenAI(
+  api_key=OPENAI_API_KEY
+)
 
 # .pdf file
 # I've try using library like PyPDF2 or PyMuPDF to convert pdf to text, but the symbols and format is hard to convert as I thought.
