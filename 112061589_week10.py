@@ -4,7 +4,7 @@ import os
 from openai import OpenAI
 
 # import OpenAI
-OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', "API key not found")
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 client = OpenAI(OPENAI_API_KEY)
 
 # .pdf file
