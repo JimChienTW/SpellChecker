@@ -218,7 +218,7 @@ col1, col2 = st.columns([2, 3])
 # get user input
 with col1:
     st.subheader("Your input")
-    with st.form(key="input", clear_on_submit=True):
+    with st.form(key="input", clear_on_submit=False):
         input = st.text_input("Type words or sentences")
         submit = st.form_submit_button("Submit")
 
