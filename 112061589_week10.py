@@ -1,9 +1,11 @@
 import streamlit as st
 import pandas as pd
+import os
 from openai import OpenAI
 
 # import OpenAI
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+# OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', "Key not found") # for local api key
 client = OpenAI(
   api_key=OPENAI_API_KEY
 )
@@ -227,7 +229,7 @@ with col2:
     
     # display correciton
     with tab1:
-        if submit:
+        if submit and input:
             completion = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
@@ -256,6 +258,9 @@ with col2:
              # store data   
             new_data = {"input": input, "response": response[1]}
             st.session_state.data.append(new_data)
+            
+        elif submit:
+          st.error("Please provide some words or sentences for correction.")
     
     # display correction history       
     with tab2:
