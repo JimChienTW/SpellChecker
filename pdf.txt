@@ -1,0 +1,27 @@
+pdf_file = """[
+    {
+        word: a,
+        #1 example: {
+            wrong example: "I hope you all have a enjoyable stay.",
+            correct example: "I hope you all have an enjoyable stay/",
+            instruction: "Always use an (NOT a) before a word beginning with a vowel sound: 'an egg' 'an envelope'."
+        },
+        #2 example: {
+            wrong example: "My husband is doing a MSc in civil engineering.",
+            correct example: "My husband is doing an MSc in civil engineering.".
+            instruction: "Use an (NOT a) before an abbreviation that begins with a vowel sound: 'an MSc' 'an MP'."
+        },
+        #3 example: {
+            wrong example: "Sometimes it it difficult to live a honest life.",
+            correct example: "",
+            instruction: ""
+        }
+        
+    },
+    {
+        word: abandon,
+        #3 example: {
+            wrong example: "",
+            correct example: "",
+            instruction: ""
+]"""
